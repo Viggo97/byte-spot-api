@@ -29,7 +29,6 @@ export const getOffers = async (req, res) => {
                ) AS technologies
         FROM offers
         `);
-        console.log(result.rows)
         const results = filterResults(result.rows, queryParams);
         return res.json(results);
     } catch (error) {
@@ -86,6 +85,6 @@ const filterResults = (rows, params) => {
         return conditions.every(c => c(row));
     })
 
-
+    console.log(results)
     return results;
 }
