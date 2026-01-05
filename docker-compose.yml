@@ -1,5 +1,5 @@
 services:
-  db:
+  database:
     build: ./db
     shm_size: 256mb
     container_name: byte-spot-db
@@ -10,8 +10,14 @@ services:
     volumes:
       - byte-spot-db:/var/lib/postgresql
   api:
+    depends_on:
+      - database
     build: ./api
+    container_name: api
     ports:
       - "3000:3000"
+    volumes:
+      - ./api:/app
+      - /app/node_modules
 volumes:
   byte-spot-db:
