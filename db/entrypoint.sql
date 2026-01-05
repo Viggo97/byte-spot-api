@@ -1,0 +1,12 @@
+\i '/docker-entrypoint-initdb.d/tables/companies.sql'
+\i '/docker-entrypoint-initdb.d/tables/locations.sql'
+\i '/docker-entrypoint-initdb.d/tables/technologies.sql'
+\i '/docker-entrypoint-initdb.d/tables/offers.sql'
+\i '/docker-entrypoint-initdb.d/tables/offers-companies.sql'
+\i '/docker-entrypoint-initdb.d/tables/offers-locations.sql'
+\i '/docker-entrypoint-initdb.d/tables/offers-technologies.sql'
+
+\i '/docker-entrypoint-initdb.d/data/companies.sql'
+\i '/docker-entrypoint-initdb.d/data/locations.sql'
+\i '/docker-entrypoint-initdb.d/data/technologies.sql'
+\i '/docker-entrypoint-initdb.d/data/offers.sql'
