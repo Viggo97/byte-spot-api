@@ -117,10 +117,11 @@ const filterResults = (rows, params) => {
         })
         .sort(sortFn)
 
+    const total = results.length;
     const limited = results.splice(offset, limit);
 
     return {
         data: limited,
-        total: results.length
+        total: total,
     };
 }
